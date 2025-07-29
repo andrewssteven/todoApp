@@ -40,12 +40,14 @@ const Task = ({ task }) => {
           Remove
           {/* <Trash/> */}
         </button>
+        
         <button
           onClick={() => dispatch(toggleTodo(task.id))}
           className="text-sm text-green-600 hover:underline"
         >
           {task.isDone ? 'Undo' : 'Done'}
         </button>
+
         <button
           onClick={() => (editMode ? handleEdit() : setEditMode(true))}
           className="text-sm text-blue-600 hover:underline"
